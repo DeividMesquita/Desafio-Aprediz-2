@@ -13,10 +13,11 @@ body {
     justify-content: space-around;
     font-weight: 600;
     background-color: white;
+    height: 60px;
 }
 
 .nav__menu {
-    padding: 15px;
+    padding: 16px;
 }
 
 .nav__logo{
@@ -31,9 +32,11 @@ body {
 .nav__menu-list {
     display: flex;
     justify-content: space-around;
-    justify-content: center;
+    align-content: center;
     list-style: none;
     gap: 20px;
+    height: 30px;
+    margin: 0;
 }
 
 .nav__menu-link {
