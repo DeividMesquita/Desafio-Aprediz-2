@@ -10,6 +10,7 @@
 .c-navbar {
     background-color: #FFFF;
 }
+
 .c-navbar__menu {
     height: 60px;
     display: flex;
@@ -33,7 +34,7 @@
     gap: 20px;
 }
 
-.c-navbar__list a{
+.c-navbar__list a {
     text-decoration: none;
     color: #333333;
     font-size: 24px;
@@ -44,6 +45,7 @@
 .c-menu-mobile {
     display: none;
 }
+
 .c-menu-mobile__line {
     width: 30px;
     height: 5px;
@@ -51,8 +53,106 @@
     border-radius: 4px;
 }
 
+
+.c-section-fav {
+    background-image: url(/assets/img/image-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.c-section-fav__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 65px;
+    height: 1020px;
+
+}
+
+.c-section-fav__h1 h1 {
+    font-size: 72px;
+    line-height: 86px;
+    font-weight: 700;
+}
+
+.c-section-fav__line {
+    width: 100px;
+    height: 5px;
+    background-color: #333333;
+    border-radius: 4px;
+}
+
+.c-section-fav__p p {
+    font-size: 24px;
+    line-height: 29px;
+
+}
+
+.c-section-fav___arrow  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c-section-fav___arrow figure img {
+    width: 60px;
+    height: 50px;
+}
+
+.c-section-about {
+    background: #FA8550 0% 0% no-repeat padding-box;
+}
+
+.c-section-about__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 605px;
+}
+
+.c-section-about__h1 h1 {
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.c-section-about__line {
+    width: 100px;
+    height: 5px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    align-content: center;
+}
+
+.c-section-about__p p {
+    font-size: 24px;
+    text-align: center;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.c-section-about__button {
+    width: 200px;
+    height: 60px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    opacity: 1;
+    border: none;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #FA8550;
+}
+
+
 @media (max-width:1200px) {
-    
+
     .c-navbar__links {
         display: none;
     }
@@ -62,5 +162,21 @@
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
+    }
+}
+
+
+@media (max-width:570px) {
+
+    .c-section-fav__h1 h1 {
+        font-size: 48px;
+        line-height: 58px;
+        font-weight: 700;
+    }
+
+    .c-section-fav__p p {
+        font-size: 20px;
+        line-height: 24px;
+
     }
 }
