@@ -9,6 +9,11 @@
 /*Navbar*/
 .c-navbar {
     background-color: #FFFF;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
 }
 
 .c-navbar__menu {
@@ -53,7 +58,7 @@
     border-radius: 4px;
 }
 
-
+/*Section sobre fav*/
 .c-section-fav {
     background-image: url(/assets/img/image-bg.jpg);
     background-size: cover;
@@ -62,38 +67,46 @@
     width: 100%;
 }
 
+.c-section-fav__shadow {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .c-section-fav__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 65px;
-    height: 1020px;
-
+    gap: 30px;
+    position: relative;
+    height: calc(100vh - 60px);
 }
 
 .c-section-fav__h1 h1 {
     font-size: 72px;
     line-height: 86px;
     font-weight: 700;
+    color: #FFFFFF;
 }
 
 .c-section-fav__line {
     width: 100px;
     height: 5px;
-    background-color: #333333;
+    background-color: #FFFFFF;
     border-radius: 4px;
 }
 
 .c-section-fav__p p {
     font-size: 24px;
     line-height: 29px;
-
+    color: #FFFFFF;
 }
 
-.c-section-fav___arrow  {
+.c-section-fav___arrow {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
 }
 
 .c-section-fav___arrow figure img {
@@ -101,6 +114,8 @@
     height: 50px;
 }
 
+
+/*Section sobre*/
 .c-section-about {
     background: #FA8550 0% 0% no-repeat padding-box;
 }
@@ -147,11 +162,142 @@
     font-size: 24px;
     line-height: 29px;
     font-weight: 700;
+    transition: .5s ease;
     color: #FA8550;
 }
 
+.c-section-about__button:hover {
+    background-color: transparent;
+    border: 1px solid #333333;
+    color: #333333;
+}
 
-@media (max-width:1200px) {
+
+/*Section sobre pontos do jogo*/
+
+.c-section-point__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 562px;
+    gap: 30px;
+}
+
+.c-section-point__h1 h1 {
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.c-section-point__line {
+    width: 100px;
+    height: 5px;
+    background-color: rgba(250, 133, 80, 1);
+    border-radius: 4px;
+}
+
+.c-section-point__list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.c-section-point__column {
+    display: flex;
+    gap: 20px;
+}
+
+.c-section-point__icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c-section-point__icons img {
+    width: 32px;
+    height: 32px;
+}
+
+.c-section-point__icons h1 {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+}
+
+.c-section-point__icons p {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}
+
+/*section CAROUSEL*/
+
+.c-section-carousel__content {
+    background: #F8F8F8 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.c-section-carousel__box {
+    height: 660px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.owl-carousel {
+    max-width: 820px;
+    max-height: 460px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-section-baixar {
+    background-color: #333333;
+}
+
+.c-section-baixar__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 482px;
+    gap: 50px;
+}
+
+.c-section-baixar__h1 h1 {
+    color: #FFFFFF;
+    font-size: 60px;
+    line-height: 72px;
+}
+
+.c-section-baixar__button {
+    width: 200px;
+    height: 60px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    opacity: 1;
+    border: none;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    transition: .5s ease;
+    color: #333333;
+}
+
+.c-section-baixar__button:hover {
+    background-color: transparent;
+    border: 1px solid #ffff;
+    color: #FFFFFF;
+}
+
+
+@media (max-width:1024px) {
 
     .c-navbar__links {
         display: none;
@@ -163,10 +309,85 @@
         gap: 5px;
         cursor: pointer;
     }
+
+    .c-section-fav__h1 h1 {
+        font-size: 72px;
+        line-height: 86px;
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+
+    .c-section-fav__p p {
+        font-size: 24px;
+        line-height: 29px;
+        color: #FFFFFF;
+    }
+
+    .c-section-fav___arrow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .c-section-fav___arrow figure img {
+        width: 60px;
+        height: 50px;
+    }
+
+    .c-section-point__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /*Section sobre o jogo*/
+    .c-section-about__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: 634px;
+    }
+
+    /*Section sobre pontos do jogo*/
+
+    .c-section-point__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 737px;
+        gap: 30px;
+    }
+
+    .c-section-point__h1 h1 {
+        font-size: 60px;
+        line-height: 72px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .c-section-point__line {
+        width: 100px;
+        height: 5px;
+        background-color: rgba(250, 133, 80, 1);
+        border-radius: 4px;
+    }
+
+    .c-section-point__icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
 @media (max-width:570px) {
+
+    .c-section-fav__content {
+        max-height: 700px;
+    }
 
     .c-section-fav__h1 h1 {
         font-size: 48px;
@@ -179,4 +400,87 @@
         line-height: 24px;
 
     }
+
+    .c-section-fav___arrow figure img {
+        width: 60px;
+        height: 50px;
+    }
+
+    .c-section-point__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /*Section sobre o jogo*/
+    .c-section-about__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: 481px;
+    }
+
+    .c-section-about__h1 h1 {
+        font-size: 36px;
+        line-height: 43px;
+        font-weight: 700;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .c-section-about__p p {
+        font-size: 20px;
+        text-align: center;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    /*Section sobre pontos do jogo*/
+
+    .c-section-point__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 841px;
+        gap: 30px;
+    }
+
+    .c-section-point__h1 h1 {
+        font-size: 36px;
+        line-height: 46px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .c-section-point__line {
+        width: 100px;
+        height: 5px;
+        background-color: rgba(250, 133, 80, 1);
+        border-radius: 4px;
+    }
+
+    .c-section-point__column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .c-section-point__icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .c-section-baixar__content {
+        height: 233px;
+    }
+
+    .c-section-baixar__h1 h1 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
 }
