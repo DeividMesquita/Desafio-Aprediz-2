@@ -250,6 +250,11 @@
     margin: 0 auto;
 }
 
+.owl-carousel img {
+    width: 820px;
+    height: 460px;
+}
+
 .owl-carousel::before,
 .owl-carousel::after {
     content: "";
@@ -257,7 +262,7 @@
     top: 0;
     height: 100%;
     bottom: 0;
-    width: 30%;
+    width: 10%;
     /* Aumente a largura para cobrir mais da metade */
     z-index: 2;
 }
@@ -270,6 +275,58 @@
 .owl-carousel::after {
     right: 0;
     background: linear-gradient(to left, #F8F8F8 50%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0));
+}
+
+/* Setas de navegação */
+.carousel-arrow-left,
+.carousel-arrow-right {
+    position: absolute;
+    top: 2500px;
+    transform: translateY(-50%);
+    background-color: #FA8550;
+    z-index: 5;
+    /* Coloca as setas acima dos outros elementos */
+    color: #FA8550;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 50%;
+    width: 40px;
+    /* Ajuste o tamanho conforme necessário */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-arrow-left img,
+.carousel-arrow-right img {
+    width: 11px;
+    height: 17px;
+}
+
+.carousel-arrow-left button,
+.carousel-arrow-right button {
+    border: none;
+    background-color: #FA8550;
+}
+
+.carousel-arrow-left {
+    left: 250px;
+    /* Ajusta a posição para mover mais para a esquerda */
+}
+
+.carousel-arrow-right {
+    right: 250px;
+    /* Ajusta a posição para mover mais para a direita */
+}
+
+
+.carousel-arrow-left img,
+.carousel-arrow-right img {
+    width: 100%;
+    /* Garante que as setas ocupem toda a área do botão */
+    height: auto;
 }
 
 /* Estilo dos pontos */
@@ -362,6 +419,8 @@
 }
 
 @media (max-width:1024px) {
+    
+    /*Header*/
 
     .c-navbar__links {
         display: none;
@@ -373,6 +432,8 @@
         gap: 5px;
         cursor: pointer;
     }
+
+    /*Section fav*/
 
     .c-section-fav__h1 h1 {
         font-size: 55px;
@@ -399,12 +460,6 @@
         height: 50px;
     }
 
-    .c-section-point__list {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
     /*Section sobre o jogo*/
     .c-section-about__content {
         display: flex;
@@ -424,6 +479,12 @@
         align-items: center;
         height: 737px;
         gap: 30px;
+    }
+
+    .c-section-point__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .c-section-point__h1 h1 {
@@ -449,13 +510,38 @@
     /*Section Carousel*/
     .c-section-carousel__box {
         height: 480px;
-        
+    }
+
+    .owl-carousel::before,
+    .owl-carousel::after {
+        width: 10%;
+    }
+
+    .owl-carousel img {
+        width: 500px;
+        height: 280px;
+    }
+
+    .carousel-arrow-left,
+    .carousel-arrow-right {
+        top: 2630px;
+    }
+
+    .carousel-arrow-left {
+        left: 50px;
+        /* Ajusta a posição para mover mais para a esquerda */
+    }
+    
+    .carousel-arrow-right {
+        right: 50px;
+        /* Ajusta a posição para mover mais para a direita */
     }
 }
 
 
 @media (max-width:570px) {
 
+    /*Section fav*/    
     .c-section-fav__content {
         max-height: 700px;
     }
@@ -477,18 +563,8 @@
         height: 50px;
     }
 
-    .c-section-point__list {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
     /*Section sobre o jogo*/
     .c-section-about__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         gap: 30px;
         height: 481px;
     }
@@ -497,24 +573,16 @@
         font-size: 36px;
         line-height: 43px;
         font-weight: 700;
-        text-align: center;
-        color: #FFFFFF;
     }
 
     .c-section-about__p p {
         font-size: 20px;
-        text-align: center;
         line-height: 24px;
-        color: #FFFFFF;
     }
 
     /*Section sobre pontos do jogo*/
 
     .c-section-point__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         height: 841px;
         gap: 30px;
     }
@@ -523,14 +591,6 @@
         font-size: 36px;
         line-height: 46px;
         font-weight: 700;
-        text-align: center;
-    }
-
-    .c-section-point__line {
-        width: 100px;
-        height: 5px;
-        background-color: rgba(250, 133, 80, 1);
-        border-radius: 4px;
     }
 
     .c-section-point__column {
@@ -539,12 +599,45 @@
         gap: 20px;
     }
 
-    .c-section-point__icons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    /*Section carousel*/
+
+    .c-section-carousel__box {
+        height: 240px;
     }
 
+    .owl-carousel::before,
+    .owl-carousel::after {
+        width: 5%;
+    }
+
+    .owl-carousel img {
+        width: 250px;
+        height: 140px;
+    }
+
+    .carousel-arrow-left,
+    .carousel-arrow-right {
+        top: 2130px;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+
+    .carousel-arrow-left img,
+    .carousel-arrow-right img {
+        width: 11px;
+        height: 17px;
+    }
+
+    .carousel-arrow-left {
+        left: 25px;
+    }
+
+    .carousel-arrow-right {
+        right: 25px;
+    }
+
+    /*Section Baixar*/
     .c-section-baixar__content {
         height: 233px;
     }
@@ -553,16 +646,4 @@
         font-size: 36px;
         line-height: 46px;
     }
-
-    .c-section-carousel__box {
-        height: 240px;
-    }
-
-    .c-section-carousel__box {
-        height: 240px;
-        
-    }
-
-    
-
 }

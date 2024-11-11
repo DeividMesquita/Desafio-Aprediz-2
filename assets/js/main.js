@@ -4,25 +4,38 @@ $(document).ready(function() {
         items: 3,
         loop: true,
         margin: 20,
-        
+        center: true,
+        autoWidth: true,
         nav: false,
-        dots: false, // Desabilitar os pontos padrão do Owl Carousel        autoplayHoverPause: true,
+        dots: false, 
         startPosition: 1,
         slideTransition: 'ease-in',
-        responsive:{
-            0:{
-                items:3
+        responsive: {
+            0: {
+                items: 3,
+                margin: 10
             },
-            600:{
-                items:3
+            600: {
+                items: 3,
+                margin: 20
             },
-            1000:{
-                items:3
+            1000: {
+                items: 3
             }
         }
-    })
+    });
 
-        
+    // Evento de clique para a seta esquerda
+    $('.carousel-arrow-left').click(function() {
+        // Ir para o slide anterior no Owl Carousel
+        owl.trigger('prev.owl.carousel');
+    });
+
+    // Evento de clique para a seta direita
+    $('.carousel-arrow-right').click(function() {
+        // Ir para o próximo slide no Owl Carousel
+        owl.trigger('next.owl.carousel');
+    });
 
     // Adicionar evento de clique para os pontos personalizados
     $('.dot').click(function() {
