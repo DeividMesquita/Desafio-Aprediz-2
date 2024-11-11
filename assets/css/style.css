@@ -247,8 +247,6 @@
 
 .owl-carousel {
     overflow: visible;
-    width: 100%;
-    /* Ajuste conforme necessário */
     margin: 0 auto;
 }
 
@@ -257,8 +255,9 @@
     content: "";
     position: absolute;
     top: 0;
+    height: 100%;
     bottom: 0;
-    width: 20%;
+    width: 30%;
     /* Aumente a largura para cobrir mais da metade */
     z-index: 2;
 }
@@ -273,17 +272,39 @@
     background: linear-gradient(to left, #F8F8F8 50%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0));
 }
 
-.owl-carousel .item {
-    width: 100% !important; /* Faz com que cada item ocupe 100% da largura do carrossel */
+/* Estilo dos pontos */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-.item {
-    position: relative;
-    opacity: 1;
-    transition: opacity 0.5s ease; 
+.dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+/* Ocultando as imagens não ativas */
+.carousel-image {
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
 }
 
 
+/*Section Baixar*/
 .c-section-baixar {
     background-color: #333333;
 }
@@ -424,6 +445,12 @@
         flex-direction: column;
         align-items: center;
     }
+
+    /*Section Carousel*/
+    .c-section-carousel__box {
+        height: 480px;
+        
+    }
 }
 
 
@@ -530,5 +557,12 @@
     .c-section-carousel__box {
         height: 240px;
     }
+
+    .c-section-carousel__box {
+        height: 240px;
+        
+    }
+
+    
 
 }
