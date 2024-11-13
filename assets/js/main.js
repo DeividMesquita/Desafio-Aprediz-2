@@ -2,7 +2,7 @@ $(document).ready(function() {
     // Inicializar o Owl Carousel
     const owl = $('.owl-carousel').owlCarousel({
         items: 3,
-        loop: true,
+        loop: false,
         margin: 20,
         center: true,
         autoWidth: true,
