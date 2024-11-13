@@ -8,6 +8,7 @@
 /*Navbar*/
 .c-navbar {
     background-color: #FFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0px;
     left: 0px;
@@ -78,7 +79,7 @@
     height: 1024px;
 }
 
-.c-section-fav__h1 h1 {
+.c-section-fav__h2 h2 {
     font-size: 72px;
     line-height: 86px;
     font-weight: 700;
@@ -102,7 +103,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 70px;
     /* Espaçamento superior */
     width: 100%;
     position: static;
@@ -129,7 +130,7 @@
     height: 605px;
 }
 
-.c-section-about__h1 h1 {
+.c-section-about__h2 h2 {
     font-size: 60px;
     line-height: 72px;
     font-weight: 700;
@@ -184,7 +185,7 @@
     gap: 30px;
 }
 
-.c-section-point__h1 h1 {
+.c-section-point__h2 h2 {
     font-size: 60px;
     line-height: 72px;
     font-weight: 700;
@@ -220,7 +221,7 @@
     height: 32px;
 }
 
-.c-section-point__icons h1 {
+.c-section-point__icons h2 {
     font-size: 24px;
     line-height: 29px;
     font-weight: 700;
@@ -340,6 +341,7 @@
     margin: 0 5px;
     background-color: #ddd;
     border-radius: 50%;
+    border: 1px solid #333333;
     display: inline-block;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -373,7 +375,7 @@
     gap: 50px;
 }
 
-.c-section-baixar__h1 h1 {
+.c-section-baixar__h2 h2 {
     color: #FFFFFF;
     font-size: 60px;
     line-height: 72px;
@@ -400,7 +402,7 @@
 }
 
 .c-footer__content {
-    height: 150px;
+    max-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -408,16 +410,16 @@
 }
 
 .c-footer__riot {
-    height: 150px;
+    height: 100%;
 }
 
 .c-footer__riot img {
     width: 178px;
-
+    height: 150px;
 }
 
 @media (max-width:1024px) {
-    
+
     /*Header*/
 
     .c-navbar__links {
@@ -433,7 +435,7 @@
 
     /*Section fav*/
 
-    .c-section-fav__h1 h1 {
+    .c-section-fav__h2 h2 {
         font-size: 55px;
         line-height: 86px;
         font-weight: 700;
@@ -485,7 +487,7 @@
         gap: 20px;
     }
 
-    .c-section-point__h1 h1 {
+    .c-section-point__h2 h2 {
         font-size: 60px;
         line-height: 72px;
         font-weight: 700;
@@ -529,7 +531,7 @@
         left: 15px;
         /* Ajusta a posição para mover mais para a esquerda */
     }
-    
+
     .carousel-arrow-right {
         right: 15px;
         /* Ajusta a posição para mover mais para a direita */
@@ -539,12 +541,12 @@
 
 @media (max-width:570px) {
 
-    /*Section fav*/    
+    /*Section fav*/
     .c-section-fav__content {
         max-height: 700px;
     }
 
-    .c-section-fav__h1 h1 {
+    .c-section-fav__h2 h2 {
         font-size: 48px;
         line-height: 58px;
         font-weight: 700;
@@ -567,7 +569,7 @@
         height: 481px;
     }
 
-    .c-section-about__h1 h1 {
+    .c-section-about__h2 h2 {
         font-size: 36px;
         line-height: 43px;
         font-weight: 700;
@@ -585,7 +587,7 @@
         gap: 30px;
     }
 
-    .c-section-point__h1 h1 {
+    .c-section-point__h2 h2 {
         font-size: 36px;
         line-height: 46px;
         font-weight: 700;
@@ -638,9 +640,10 @@
     /*Section Baixar*/
     .c-section-baixar__content {
         height: 233px;
+        gap: 30px;
     }
 
-    .c-section-baixar__h1 h1 {
+    .c-section-baixar__h2 h2 {
         font-size: 36px;
         line-height: 46px;
     }
