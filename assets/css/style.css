@@ -163,6 +163,10 @@
     line-height: 29px;
     font-weight: 700;
     transition: .5s ease;
+}
+
+.c-section-about__button a {
+    text-decoration: none;
     color: #FA8550;
 }
 
@@ -310,12 +314,12 @@
 }
 
 .carousel-arrow-left {
-    left: 250px;
+    left: 300px;
     /* Ajusta a posição para mover mais para a esquerda */
 }
 
 .carousel-arrow-right {
-    right: 250px;
+    right: 300px;
     /* Ajusta a posição para mover mais para a direita */
 }
 
@@ -390,6 +394,10 @@
     line-height: 29px;
     font-weight: 700;
     transition: .5s ease;
+}
+
+.c-section-baixar__button a {
+    text-decoration: none;
     color: #333333;
 }
 
@@ -526,12 +534,12 @@
     }
 
     .carousel-arrow-left {
-        left: 50px;
+        left: 15px;
         /* Ajusta a posição para mover mais para a esquerda */
     }
     
     .carousel-arrow-right {
-        right: 50px;
+        right: 15px;
         /* Ajusta a posição para mover mais para a direita */
     }
 }
@@ -628,11 +636,11 @@
     }
 
     .carousel-arrow-left {
-        left: 25px;
+        left: 15px;
     }
 
     .carousel-arrow-right {
-        right: 25px;
+        right: 15px;
     }
 
     /*Section Baixar*/
